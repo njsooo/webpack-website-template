@@ -1,0 +1,15 @@
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 1280px;
+  height: inherit;
+  margin: 0 auto;
+}

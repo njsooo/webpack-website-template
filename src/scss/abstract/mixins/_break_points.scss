@@ -1,0 +1,11 @@
+@mixin media-tablet-width {
+  @media (max-width: #{$break-point-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin media-phone-width {
+  @media (max-width: #{$break-point-phone-width}) {
+    @content;
+  }
+}

@@ -1,0 +1,10 @@
+@use "sass:color";
+
+@import "@/scss/abstract/variables";
+@import "@/scss/abstract/mixins";
+
+@import "@/scss/base/reset";
+@import "@/scss/base/class";
+
+@import "@/scss/partials/header";
+@import "@/scss/partials/footer";
