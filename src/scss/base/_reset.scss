@@ -132,9 +132,12 @@ table {
 
 // Custom
 body,
+table,
 input,
-button {
-  font-family: "Circular Std", "Noto Sans KR", sans-serif;
+button,
+select,
+textarea {
+  font-family: "Noto Sans KR", sans-serif;
   line-height: 1;
 }
 
@@ -145,6 +148,7 @@ a {
 
 img {
   display: block;
+  width: 100%;
 }
 
 svg {
