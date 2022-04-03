@@ -17,6 +17,14 @@ module.exports = (env) => ({
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|bmp|gif|svg|webp)$/,
+        type: "asset/resource",
+        generator: {
+          // emit: false,
+          filename: "images/[name][ext]",
+        },
+      },
+      {
         test: /\.s?css$/,
         use: [
           env.WEBPACK_BUILD === true ? MiniCssExtractPlugin.loader : "style-loader",
@@ -38,11 +46,9 @@ module.exports = (env) => ({
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: require("./babel.config.json").presets,
-          },
+        loader: "babel-loader",
+        options: {
+          presets: require("./babel.config.json").presets,
         },
       },
     ],
