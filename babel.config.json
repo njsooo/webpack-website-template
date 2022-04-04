@@ -4,9 +4,7 @@
       "@babel/preset-env",
       {
         "debug": false,
-        "targets": "> 0.5%, last 2 versions",
-        "useBuiltIns": "usage",
-        "corejs": "3.20"
+        "targets": "> 0.5%, last 2 versions"
       }
     ]
   ]

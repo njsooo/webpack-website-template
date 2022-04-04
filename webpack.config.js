@@ -34,14 +34,6 @@ module.exports = (env) => ({
         ],
       },
       {
-        test: /\.(png|jpe?g|bmp|gif|svg|webp)$/,
-        type: "asset/resource",
-        generator: {
-          // emit: false,
-          filename: "images/[name][ext]",
-        },
-      },
-      {
         test: /\.s?css$/,
         use: [
           env.WEBPACK_BUILD === true ? MiniCssExtractPlugin.loader : "style-loader",
