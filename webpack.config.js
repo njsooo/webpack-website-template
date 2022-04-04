@@ -17,6 +17,23 @@ module.exports = (env) => ({
   module: {
     rules: [
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              sources: false,
+            },
+          },
+          {
+            loader: "posthtml-loader",
+            options: {
+              plugins: [require("posthtml-include")({ root: "./src/html/partials" })],
+            },
+          },
+        ],
+      },
+      {
         test: /\.(png|jpe?g|bmp|gif|svg|webp)$/,
         type: "asset/resource",
         generator: {

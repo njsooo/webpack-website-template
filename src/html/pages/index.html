@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
     <!-- Google Fonts -->
-    <%= require('html-loader!@/html/partials/google_fonts.html').default %>
+    <include src="google_fonts.html"></include>
   </head>
   <body>
-    <%= require('html-loader!@/html/partials/header.html').default %>
+    <include src="header.html"></include>
     <!-- // HEADER -->
 
     <main>
@@ -19,7 +19,7 @@
     </main>
     <!-- // MAIN -->
 
-    <%= require('html-loader!@/html/partials/footer.html').default %>
+    <include src="footer.html"></include>
     <!-- // FOOTER -->
   </body>
 </html>
