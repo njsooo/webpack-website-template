@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -55,6 +56,9 @@ module.exports = (env) => ({
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+    }),
     new CopyPlugin({
       patterns: [{ from: "public" }],
     }),
