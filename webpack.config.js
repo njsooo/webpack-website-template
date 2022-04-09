@@ -44,21 +44,13 @@ module.exports = (env) => ({
             },
           },
           "postcss-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              additionalData: "@import '@/scss/pages/commons';",
-            },
-          },
+          "sass-loader",
         ],
       },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
-        options: {
-          presets: require("./babel.config.json").presets,
-        },
       },
     ],
   },
