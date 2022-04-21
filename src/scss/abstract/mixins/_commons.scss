@@ -1,12 +1,9 @@
-@mixin vertical-bar($height: 12px, $bg-color: #cecece) {
+@mixin vertical-bar($width, $height, $margin-left-right, $bg-color) {
   content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 1px;
+  display: inline-block;
+  width: $width;
   height: $height;
-  margin: auto 0;
+  margin: 0 $margin-left-right;
   background-color: $bg-color;
   @content;
 }
